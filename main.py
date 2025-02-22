@@ -20,8 +20,8 @@ width_label_position=(width // 2-100, height-80)
 cv2.putText(image_rgb, f'Width: {width}px', width_label_position, cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 0, 0), 2)
 
 
-cv2.imwrite('example.jpg')
-plt.imshow(image_rgb, cv2.COLOR_BGR2RGB)
+cv2.imwrite('annotated_example.jpg', cv2.cvtColor(image_rgb, cv2.COLOR_RGB2BGR))
+plt.imshow(image_rgb)
 plt.title("Annotated Image with Bi-Directional Width Arrows")
 plt.axis('off')
 plt.show()
